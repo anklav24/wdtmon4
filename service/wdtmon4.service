@@ -1,0 +1,13 @@
+[Unit]
+Description=wdtmon4 Open_Development_USB_Watchdog
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/root/wdtmon4 /dev/ttyACM0 -w
+
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
